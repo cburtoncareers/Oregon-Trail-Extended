@@ -45,7 +45,7 @@ class Wagon {
     }
 
     getAvailableSeatCount() {
-        return (this.capacity - this.passengers)
+        return (this.capacity - this.passengers.length)
     }
 
     join(traveler) {
@@ -69,7 +69,7 @@ class Wagon {
     totalFood() {
         let foodTotal = 0
         for ( let counter = 0; counter < this.passengers.length; counter ++) {
-            foodTotal += this.passengers[counter]
+            foodTotal += this.passengers[counter].food
         }
         
         return foodTotal;
